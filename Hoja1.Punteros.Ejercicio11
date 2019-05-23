@@ -1,0 +1,26 @@
+//Hoja1.Punteros.Ejercicio11
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+double area(double radio)
+{
+	double pi;
+	pi = 3.14159;
+	double area;
+	area = pi * (radio * radio);
+	
+	return  area;
+}
+int main()
+{
+	//VARIABLE
+	double radio;
+
+	cout << "Ingrese el radio de la circunferencia: ";
+	cin >> radio;
+	cout << "El area de la circunferencia es: " << area(radio);
+
+	_getch();
+}
