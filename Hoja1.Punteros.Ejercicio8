@@ -1,0 +1,43 @@
+//Hoja1.Punteros.Ejercicio8
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void EsBisiesto(int *año)
+{
+	if ((*año % 400 == 0 || *año % 100 != 0) && (*año % 4 == 0 ))
+	{
+		cout << *año << " es año bisiesto. ";
+	}
+	else
+	{
+		cout << *año << " no es año bisiesto. ";
+	}
+
+}
+
+int main(){
+
+	//VARIABLES
+	int año;
+	int *añopresente;
+	añopresente = &año;
+
+	do
+	{
+		cout << "Ingrese el año el cual desea saber si es bisiesto o no: ";
+		cin >> año;
+		cout << endl;
+
+		EsBisiesto(añopresente);
+		cout << endl;
+
+		cout << añopresente;
+		cout << endl;
+
+	} while (añopresente == 0);
+
+
+	_getch();
+}
