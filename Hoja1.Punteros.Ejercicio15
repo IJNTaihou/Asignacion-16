@@ -1,0 +1,40 @@
+//Hoja1.Punteros.Ejercicio15
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int factorial(int n)
+{
+	int fact = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		fact = i * fact;
+	}
+	return fact;
+}
+
+int numCombinatorio(int N, int K)
+{
+	int valorCombinatorio;
+	valorCombinatorio = factorial(N) / (factorial(K) * factorial(N - K));
+	return valorCombinatorio;
+}
+int main()
+{
+	//VARIABLES
+	int N;
+	int K;
+
+	cout << "Ingrese el valor de [N]: "; 
+	cin >> N;
+	cout << endl;
+
+	cout << "Ingrese el valor de [K]: "; 
+	cin >> K;
+	cout << endl;
+
+	cout << "Si N= " << N << " y K= " << K << endl;
+	cout << "El valor del numero combinatorio = " << N << "!/(" << K << "!(" << N << "-" << K << ")! = " << numCombinatorio(N, K);
+	_getch();
+}
