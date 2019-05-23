@@ -1,0 +1,58 @@
+//Hoja1.Punteros.Ejercicio6
+#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+double dollarExchange(double dollarExchangeRate, double amount) {
+return amount*dollarExchangeRate;
+}
+
+double solExchange(double solExchangeRate, double amount) {
+return amount / solExchangeRate;
+}
+
+int main()
+{
+//VARIABLES
+
+	double amount, solExchangeRate = 3.34;
+	double dollarExchangeRate = 3.14;
+	int type = 4;
+	double amountExchanged;
+
+	while (type != 3) {
+
+		cout << "¿Quieres dolares o soles? [1] soles [2] dolares [3] terminar"<<endl;
+		cin >> type;
+
+
+		switch (type)
+		{
+		case 1:
+			cout << "¿Ingrese la cantidad de dolares a vender? " << endl;
+			cin >> amount;
+			amountExchanged = dollarExchange(dollarExchangeRate, amount);
+			cout << "La cantidad a entregar es " << amountExchanged << " soles" << endl;
+			cout << "La cantidad a entregar es " << dollarExchange(dollarExchangeRate, amount) << " soles" << endl;
+
+			break;
+
+		case 2:
+			cout << "¿Ingrese la cantidad de soles a vender? ";
+			cin >> amount;
+			amountExchanged = solExchange(solExchangeRate, amount);
+			cout << "La cantidad a entregar es " << amountExchanged << " dolares" << endl;
+			cout << "La cantidad a entregar es " << solExchange(solExchangeRate, amount) << " dolares" << endl;
+
+		    break;
+
+		default:
+		break;
+
+		}
+
+	}
+
+}
+
