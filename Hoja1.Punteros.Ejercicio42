@@ -1,0 +1,47 @@
+//Hoja1.Punteros.Ejercicio42
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void Cambio(int *n, int *k)
+{
+	int aux;
+
+	if (*n > *k)
+	{
+		aux = *n;
+		*n = *k;
+		*k = aux;
+	}
+}
+int main()
+{
+	//VARIABLES
+	int N;
+	int K;
+	int *n;
+	int *k;
+
+	n = &N;
+	k = &K;
+
+	//INGRESO DE VALORES
+	cout << "Ingrese el valor de [N]: "; 
+	cin >> N;
+	cout << endl;
+
+	cout << "Ingrese el valor de [K]: "; 
+	cin >> K;
+	cout << endl;
+
+	Cambio(n, k);
+
+	//SALIDA DE VALORES
+	cout << "valor de [N]: " << N;
+	cout << endl;
+
+	cout << "valor de [K]: " << K;
+	cout << endl;
+	_getch();
+}
